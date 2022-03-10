@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/faqaccordioncard-using-javascript-animations-and-flexbox-KEMyFXD3w)
 - Live Site URL: [GitHub Pages](https://guisilveira.github.io/FAQ-Accordion-Card/)
 
 ## My process
