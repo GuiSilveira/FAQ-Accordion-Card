@@ -31,10 +31,17 @@ html {
 body {
   background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
   background-repeat: no-repeat;
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -48,7 +55,10 @@ main {
 }
 
 .box {
-  display: none;
+  position: absolute;
+  width: 30%;
+  z-index: 1;
+  transform: translate(25%, -45%);
 }
 
 .hero-image {
@@ -94,6 +104,7 @@ h1 {
   border: none;
   transition: all 0.3s;
   transform: rotate(0deg);
+  cursor: pointer;
 }
 
 .rotate {
@@ -117,7 +128,8 @@ h1 {
 }
 
 .attribution {
-  font-size: 11px;
+  margin-top: 1rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
 }
@@ -157,37 +169,50 @@ h1 {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
 @media (min-width: 1024px) {
   body {
     position: relative;
+    display: block;
   }
+
+  .container {
+    max-width: none;
+  }
+
   main {
     display: flex;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     background-image: url("/images/bg-pattern-desktop.svg");
-    background-size: 105%;
-    background-position-x: -540px;
-    background-position-y: -225px;
+    background-size: 90%;
+    background-position-x: -380px;
+    background-position-y: -180px;
     background-repeat: no-repeat;
     overflow: hidden;
     position: static;
+    display: flex;
+    justify-content: space-around;
   }
 
   .box {
     position: absolute;
     display: block;
-    width: 10%;
+    width: 12%;
     top: 43%;
     z-index: 1;
-    right: 71%;
+    right: 75.5%;
     animation: bounce 3s linear infinite;
   }
 
   .hero-image {
     position: static;
-    width: 50%;
-    height: 50%;
+    width: auto;
     margin: auto 0;
     transform: translate(-18%, 0);
   }
@@ -208,5 +233,19 @@ h1 {
 
   .question:hover {
     color: var(--soft-red);
+  }
+
+  .attribution {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  main {
+    background-size: 71%;
+  }
+
+  .box {
+    right: 75%;
   }
 }
